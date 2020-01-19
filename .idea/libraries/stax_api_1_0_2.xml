@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="stax-api-1.0-2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/stax-api-1.0-2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxb-impl-2.1.17 (1).jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxb-api-2.1 (1).jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/JavaAPIforKml-2.2.0 (1).jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/java-json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/activation-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxb-xjc-2.2 (1).jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/java-json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxb-xjc-2.2 (1).jar!/1.0" />
+    </SOURCES>
+  </library>
+</component>
