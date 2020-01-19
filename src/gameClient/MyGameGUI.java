@@ -188,7 +188,7 @@ public class MyGameGUI extends Thread {
         this.std = new StdDraw(this.g, this.game, this.fruits);
         //StdDraw.clear();
         this.G = new StdDrow_GUI(this.g, this.fruits);
-        StdDraw.picture(0, 0, "back.jpg");
+        //StdDraw.picture(0, 0, "back.jpg");
         this.G.show();
         int How_Many_Robot = Robot_Algo.initFromJson_howmanyrobot(this.game.toString());
         if (game_select == "Manual game") {

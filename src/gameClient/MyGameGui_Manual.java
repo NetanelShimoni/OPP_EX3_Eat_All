@@ -180,7 +180,7 @@ public class MyGameGui_Manual extends Thread {
 
     public void run() {
         this.game.startGame();
-        JOptionPane.showMessageDialog(null, "Attention!, if you press out of graph this game will end !");
+        JOptionPane.showMessageDialog(null, "You should press the robot you want to move, and than on the vertix you want to move in");
         StdDraw.uptadeGraph(this.g);
         fruit_GUI();
         StdDraw.show();

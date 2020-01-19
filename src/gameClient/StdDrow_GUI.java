@@ -185,7 +185,7 @@ public StdDrow_GUI (DGraph g , List <Fruit> fruits){
 
     this.gui.setXscale(ansX.get_min()-0.005,ansX.get_max()+0.002);
     this.gui.setYscale(ansY.get_min()-0.005,ansY.get_max()+0.002);
-    StdDraw.picture(0,0,"back.jpg");
+    //StdDraw.picture(0,0,"back.jpg");
     StdDraw.picture(0,0,"ddd.jpg");
     StdDraw.show();
 
@@ -220,7 +220,7 @@ public StdDrow_GUI (DGraph g , List <Fruit> fruits){
     for (Fruit t: fruits) {
         if(t.getType()==-1) {
             this.gui.picture(t.get_fruit_point().x(), t.get_fruit_point().y(), "banana.png", 0.0008, 0.0006);
-            this.gui.picture(0,0,"back.jpg");
+            //this.gui.picture(0,0,"back.jpg");
 
         }
         else{

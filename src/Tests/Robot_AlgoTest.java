@@ -1,4 +1,4 @@
-package Testing;
+package Tests;
 
 import Server.Game_Server;
 import Server.game_service;
