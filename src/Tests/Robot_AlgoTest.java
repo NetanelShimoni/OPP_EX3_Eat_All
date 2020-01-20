@@ -27,10 +27,8 @@ DGraph gg=new DGraph();
         int exepted=1;
         game_service game = Game_Server.getServer(1);
         String y = game.toString();
-        JSONObject obj = new JSONObject(y);
-        JSONObject array_robots = obj.getJSONObject("GameServer");
-        int how_many_robot = array_robots.getInt("robots");
-            assertEquals(exepted,how_many_robot);
+        int how = Robot_Algo.initFromJson_howmanyrobot(y);
+            assertEquals(exepted,how);
     }
 
     @Test
@@ -39,30 +37,13 @@ DGraph gg=new DGraph();
         game.addRobot(1);
         game.startGame();
         List <String> s1 = game.move();
-        String s=s1.get(0);
-        JSONObject obj = new JSONObject(s);
-        JSONObject array_robots = obj.getJSONObject("Robot");
-        int id = array_robots.getInt("id");
-        double value =array_robots.getInt("value");
-        int src =array_robots.getInt("src");
-        int des = array_robots.getInt("dest");
-        String s_p =array_robots.getString("pos");
-        Point3D p = new Point3D(s_p);
-        Robot_Algo r= new Robot_Algo(id,p," ",value);
-        assertEquals(r.getId(),id);
-        assertEquals(r.getPos(),p);
-        assertEquals(r.getRank(),value,0.0000001);
-
-    }
+        List <Robot_Algo> robot =Robot_Algo.initListRobot(s1);
+        Robot_Algo a= robot.get(0);
+        assertEquals(a.getId(),robot.get(0).getId());
+        assertEquals(a.getPos(),robot.get(0).getPos());
+        assertEquals(a.getRank(),robot.get(0).getRank(),0.00000002);
 
 
-    @Test
-    void initFromjson() {
-
-    }
-
-    @Test
-    void getSrc() {
     }
 
 
