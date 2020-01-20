@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * This empty class represents the set of graph-theory algorithms
  * which should be implemented as part of Ex2 - Do edit this class.
- * @author
+ * @author or laharty netanel shimoni
  *
  */
 public class Graph_Algo implements graph_algorithms {
@@ -254,7 +254,10 @@ return true;
 
         return removeDuplicates(list);
     }
-
+    /**
+     *this function check if there is same values next to each other. if yes the function remove the duplicates.(one of
+     * them)
+     */
     private static LinkedList<node_data> removeDuplicates(LinkedList<node_data> list) {
         for (int i = 0; i < list.size() - 1; i++) {
             node_data cur = list.get(i);
@@ -267,7 +270,9 @@ return true;
         return list;
     }
 
-
+    /**
+     *this function copy a graph and return the copy
+     */
         @Override
         public graph copy () {
             graph copy = new DGraph();

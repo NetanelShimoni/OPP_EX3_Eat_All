@@ -76,7 +76,7 @@ public class KML_Logger {
                         t.setBegin(t1);
                         t.setEnd(t2);
                     }else{
-                        ic.setHref("appale.jpg");
+                        ic.setHref("apple.jpg");
                         ic.setViewBoundScale(1);
                         ic.setViewRefreshTime(1);
                         ic.withRefreshInterval(1);

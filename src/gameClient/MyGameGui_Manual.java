@@ -177,7 +177,9 @@ public class MyGameGui_Manual extends Thread {
             }
         }
     }
-
+    /**
+     * this function run the game by a thread. as long as the gme does not end, the graph is constantly updated.
+     */
     public void run() {
         this.game.startGame();
         JOptionPane.showMessageDialog(null, "You should press the robot you want to move, and than on the vertix you want to move in");

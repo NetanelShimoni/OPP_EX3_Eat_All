@@ -88,28 +88,9 @@ public class MyGameGUI extends Thread {
         }
     }
 
-//    private void F_GUI(){
-////        List<String> s = this.game.getFruits();
-////        Fruit y = new Fruit();
-////        for ( String t: s) {
-////            List <Fruit> i=y.initFromJson(t);
-////            this.fruits.addAll(i);
-//        }
-//
-//        for (Fruit t: fruits) {
-//            if(t.getType()==-1) {
-//                StdDraw.picture(t.get_fruit_point().x(), t.get_fruit_point().y(), "banana.png", 0.0008, 0.0006);
-//
-//            }
-//
-//            else{
-//
-//                StdDraw.picture(t.get_fruit_point().x(), t.get_fruit_point().y(),"apple.jpg",0.0008,0.0006);
-//            }
-//        }
-//
-//    }
-
+    /**
+     * get a Fruit and find the node that close to the Fruit
+     */
     private node_data findEdgeFruit(Fruit a) {
         Point3D p = Point3D.ORIGIN;
         Iterator it = g.getV().iterator();
@@ -178,6 +159,7 @@ public class MyGameGUI extends Thread {
         StdDraw.picture(0, 0, "ddd.jpg");
         String s = JOptionPane.showInputDialog(new ImageIcon("robot.jpg"), "Choose a fild game");
         num_game = Integer.parseInt(s);
+        System.out.println(num_game);
         this.game = Game_Server.getServer(num_game);
         System.out.println(this.game.getFruits());
         this.g.init(this.game.getGraph());
@@ -258,6 +240,7 @@ public class MyGameGUI extends Thread {
      * this runnable refresh the gui
      */
     public void run() {
+
         while (this.game.isRunning()) {
             try {
                 fruit_GUI();

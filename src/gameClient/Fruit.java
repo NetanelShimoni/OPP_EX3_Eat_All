@@ -35,6 +35,7 @@ public class Fruit {
         this.loc = loc;
     }
 
+
     public Fruit() {
 
     }
