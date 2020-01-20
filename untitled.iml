@@ -36,5 +36,15 @@
     <orderEntry type="library" name="GameServer_v0.27" level="project" />
     <orderEntry type="library" name="stax-api-1.0-2" level="project" />
     <orderEntry type="library" name="jl-1.0.1" level="project" />
+    <orderEntry type="library" name="GameServer_v0.32" level="project" />
+    <orderEntry type="library" name="GameServer_v0.321" level="project" />
+    <orderEntry type="library" name="GameServer_v0.322" level="project" />
+    <orderEntry type="library" name="GameServer_v0.323" level="project" />
+    <orderEntry type="library" name="GameServer_v0.324" level="project" />
+    <orderEntry type="library" name="GameServer_v0.325" level="project" />
+    <orderEntry type="library" name="GameServer_v0.326" level="project" />
+    <orderEntry type="library" name="GameServer_v0.327" level="project" />
+    <orderEntry type="library" name="GameServer_v0.271" level="project" />
+    <orderEntry type="library" name="java-json" level="project" />
   </component>
 </module>
