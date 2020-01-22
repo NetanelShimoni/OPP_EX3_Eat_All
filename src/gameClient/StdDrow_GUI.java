@@ -158,7 +158,7 @@ public Range ansX;
     public Range ansY;
 public StdDrow_GUI (DGraph g , List <Fruit> fruits){
         StdDraw.clear();
-    this.gui.setCanvasSize(1200,1300);
+    this.gui.setCanvasSize(1500,1500);
     this.gui.disableDoubleBuffering();
     double r_minx = 999999998;
     double r_maxx = -999999998;
@@ -185,6 +185,7 @@ public StdDrow_GUI (DGraph g , List <Fruit> fruits){
 
     this.gui.setXscale(ansX.get_min()-0.005,ansX.get_max()+0.002);
     this.gui.setYscale(ansY.get_min()-0.005,ansY.get_max()+0.002);
+    this.gui.text(35.18753053591606,32.10378225882353," dssdds",0.003);
     //StdDraw.picture(0,0,"back.jpg");
     StdDraw.picture(0,0,"ddd.jpg");
     StdDraw.show();

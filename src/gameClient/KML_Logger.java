@@ -1,12 +1,25 @@
 package gameClient;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+
+import Server.Game_Server;
+import com.mysql.jdbc.Field;
 import de.micromata.opengis.kml.v_2_2_0.*;
 
 import org.json.JSONException;
+import org.junit.jupiter.api.DisplayNameGenerator;
+import org.xml.sax.ContentHandler;
+import sun.reflect.misc.FieldUtil;
 import utils.StdDraw;
 
 public class KML_Logger {
@@ -18,6 +31,7 @@ public class KML_Logger {
      * @throws JSONException
      */
     public void objKML() throws ParseException, InterruptedException, JSONException {
+        Game_Server.login(20824078);
         Kml kml = new Kml();
         Document d = kml.createAndSetDocument();
         int i = 0;
@@ -101,7 +115,18 @@ public class KML_Logger {
             }
         }
         try{
-            kml.marshal(new File(MyGameGUI.num_game+".kml"));
+            File file =new File(MyGameGUI.num_game+".kml");
+            kml.marshal(file);
+            Path file_kml_path = Paths.get(MyGameGUI.num_game+".kml");
+           // String res = StdDraw.gameGui.toString();
+                List<String> remark =Files.readAllLines(file_kml_path);
+                String output="";
+            for (String s:remark) {
+                output+=s;
+            }
+
+            System.out.println(StdDraw.gameGui.sendKML(output));
+            //System.out.println(output);
             System.out.println("Create");
         }
         catch (Exception e){

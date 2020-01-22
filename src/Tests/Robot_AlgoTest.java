@@ -68,7 +68,7 @@ DGraph gg=new DGraph();
             location_s = array_fruit.getString("pos");
             location = new Point3D(location_s);
             type = array_fruit.getInt("type");
-            a = new Fruit(value, type, location);
+            a = new Fruit(value, type, location,0);
             temp.add(0,a);
             assertEquals(a.get_fruit_point(),location);
             assertEquals(a.getType(),type);

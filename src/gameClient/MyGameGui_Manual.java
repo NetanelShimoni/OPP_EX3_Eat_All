@@ -213,6 +213,7 @@ public class MyGameGui_Manual extends Thread {
                 e.printStackTrace();
             }
         }
+        System.out.println(this.game.toString());
             }
 
 

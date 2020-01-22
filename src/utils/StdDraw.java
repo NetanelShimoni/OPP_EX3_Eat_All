@@ -35,6 +35,7 @@ import dataStructure.Node;
 import dataStructure.edge_data;
 import dataStructure.node_data;
 import gameClient.Fruit;
+import gameClient.MyGameGUI;
 import gameClient.Robot_Algo;
 import org.json.JSONException;
 
@@ -1872,6 +1873,10 @@ public StdDraw(){
 		for (Robot_Algo r:robots) {
 			StdDraw.picture(r.getPos().x(), r.getPos().y(),
 					"robot.png", 0.0008, 0.0006);
+		}
+		if (MyGameGUI.num_game==3) {
+			game.move();
+			MyGameGUI.count++;
 		}
 
     	}

@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class Robot_Algo {
     public static final double EPS1 = 0.001, EPS2 = EPS1 * EPS1, EPS = EPS2;
-    private int id,src;
+    private int id,src,dest;
     private Point3D pos;
     private String pic;
     private double rank;
@@ -85,6 +85,7 @@ public class Robot_Algo {
         r.pos=p;
         r.pic="robot.png";
         r.rank=value;
+        r.dest=des;
         return r;
     }
     /**
@@ -123,7 +124,7 @@ public int getSrc(){
                 }
             }
         }}
-        return (Node) g.allnode.get(0);
+        return (Node) g.allnode.get(1);
 
     }
     /**

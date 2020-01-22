@@ -212,6 +212,14 @@ return true;
      */
     @Override
     public List<node_data> shortestPath(int src, int dest) {
+//        if(src==dest){
+//            System.out.println("iam here");
+//            Iterator it= this.g.getE(dest).iterator();
+//            edge_data e = (edge_data) it.next();
+//            List <node_data> uu =new LinkedList<>();
+//            uu.add(this.g.getNode(e.getDest()));
+//            return uu;
+//        }
         List<node_data> ans= new LinkedList<node_data>();;
         try {
             List<node_data> temp = new LinkedList<node_data>();
